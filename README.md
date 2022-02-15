@@ -7,8 +7,8 @@ cs project
 
 # Relevent files 
   ## NEURAL NETWORKS
-    1. [activation_fun.py](docs/activation_fun.py)
-    2. [neural_net.py](docs/neural_net.py)
+    1. [activation_fun.py](Personal-assistant/activation_fun.py)
+    2. [neural_net.py](Personal-assistant/neural_net.py)
     3. model_run.py
     
   ## AI BOT
