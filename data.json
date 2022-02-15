@@ -1,0 +1,37 @@
+{
+"nlu":[
+    {"tag":"greet",
+     "intents":["hi there","hi","hey","hello"],
+     "responses":["hi, what do you want me to do today","hello there!"],
+     "actions":[]
+    },
+    {"tag":"zoom",
+     "intents":["show zoom","go to zoom","open zoom"],
+     "responses":["Alright, zoom will open shortly"],
+     "actions":["show_zoom"]
+    },
+    
+    {"tag":"google",
+    "intents":["Open google please","Lets google something","i want to look something up"],
+    "responses":["Sure right away"],
+    "actions":["google_it"]
+       },
+
+    {"tag":"search",
+    "intents":["present search bar"],
+    "responses":["search"],
+    "actions":[]
+    }
+
+ ]
+
+
+
+
+
+
+
+
+
+
+}
