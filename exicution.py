@@ -8,6 +8,7 @@ import numpy as np
 from model_run import prediction
 import nltk 
 from nltk.stem import WordNetLemmatizer
+from playsound import playsound
 lemmatizer = WordNetLemmatizer()
 nlu =  json.loads(open("data.json").read())
 words  =  pickle.load(open("words.dat","rb"))
@@ -74,9 +75,12 @@ print("GO! Bot is running!")
 while True:
     print("The bot's started")
     speech = Stealth_listening()
-    prompt =  speech.run()
+    prompt = speech.run()
     print(prompt)
-    if "mike" in prompt.lower():
+    if "liya" in prompt.lower():
+        playsound("y2meta.com - Siri Sound Effect (HD) (128 kbps).mp3")
+        resp = TextToSpeech("Hi there! how may i help you")
+        resp.run()
         command = SpeechToText()
         message = command.run()
         return_list = predict_class(message)
@@ -88,4 +92,5 @@ while True:
         # print(actions)
         if actions != []:
             set_of_actions(actions[0])
-        time.sleep(3)
+        time.sleep(2)
+        playsound("y2meta.com - Microsoft Windows XP Shutdown - Sound Effect (HD) (128 kbps).mp3")

@@ -1,8 +1,10 @@
 from text_speech import *
+from control import *
 import pyautogui as gui
 import time
 import random 
 import pyttsx3
+
 text_speech = pyttsx3.init()
 class show_zoom():
     def run (self):
@@ -12,10 +14,10 @@ class show_zoom():
         time.sleep(1)
         gui.hotkey('ctrl','alt','1')
         gui.click(x=735, y=461,duration=0.2)
-        sentense = random.choice(["There you have it , have a nice meeting !"])
+        sentense = random.choice(["There you have it , we're on zoom"])
         text_speech.say(sentense)
         text_speech.runAndWait()
-        text_speech.say("Is there anything else i can help you with?")
+        zoom_join()
         text_speech.runAndWait()
 class google_it():
     def run(self):

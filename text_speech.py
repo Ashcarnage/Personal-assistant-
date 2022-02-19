@@ -33,11 +33,12 @@ class SpeechToText_actions():
     def run(self):
         recog = sr.Recognizer()
         with sr.Microphone() as source:
+            recog.adjust_for_ambient_noise(source)
             audio = recog.listen(source)
             text = recog.recognize_google(audio)
             print(f"you have said : {text}")
             try:
-                return texthi
+                return text
             except Exception as e:
                 l = TextToSpeech(sentense = "Hmmm couldn't get you, can you repeat that . ")
                 l.run()
@@ -48,10 +49,11 @@ class Stealth_listening():
     def run (self):
         recog = sr.Recognizer()
         with sr.Microphone() as source:
+            recog.adjust_for_ambient_noise(source)
             try:
-                print("inn")
+               # print("inn")
                 audio = recog.listen(source)
-                print("listening")
+               # print("listening")
                 text = recog.recognize_google(audio)
                 print("prompt : ", text)
                 return text
